@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://bu1lxfbfbpn7d"]
+
+[ext_resource type="Script" uid="uid://bw1nifeoh3kn5" path="res://gemholder.gd" id="1_p0ohc"]
+[ext_resource type="Texture2D" uid="uid://ccb5ghkomrvqk" path="res://Sprites/objs/gemholder.png" id="2_ee3up"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ickxd"]
+
+[node name="Node2D" type="Area2D" unique_id=1523825127]
+script = ExtResource("1_p0ohc")
+
+[node name="Gemholder" type="Sprite2D" parent="." unique_id=1720339183]
+texture = ExtResource("2_ee3up")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=217133656]
+position = Vector2(0, 6)
+shape = SubResource("RectangleShape2D_ickxd")

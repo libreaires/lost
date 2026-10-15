@@ -1,0 +1,80 @@
+[gd_scene format=3 uid="uid://bwxtx1o801o3v"]
+
+[ext_resource type="Script" uid="uid://culb4qwu18sjy" path="res://Scripts/menu.gd" id="1_c1dlh"]
+[ext_resource type="PackedScene" uid="uid://p0y5mo6e1fy8" path="res://Cenas/Phases/Snowy Mountains/Levels/Level 01.tscn" id="2_c1dlh"]
+[ext_resource type="Texture2D" uid="uid://bn75go0tf0p8u" path="res://Sprites/menu/bgMenu.png" id="3_2gisx"]
+[ext_resource type="FontFile" uid="uid://dm3ch1vmt4ixr" path="res://Fonts/default.ttf" id="4_44t0y"]
+[ext_resource type="AudioStream" uid="uid://mpnkohxohe3t" path="res://audio/music/Intro Ambience.wav" id="5_oxcel"]
+
+[node name="Menu" type="Control" unique_id=1928062920 node_paths=PackedStringArray("playButton", "quitButton")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_c1dlh")
+playButton = NodePath("Container/Button")
+quitButton = NodePath("Container/Button2")
+playScene = ExtResource("2_c1dlh")
+
+[node name="BgMenu" type="Sprite2D" parent="." unique_id=1207281447]
+position = Vector2(160.99998, 121.00001)
+scale = Vector2(2.05, 2.0500002)
+texture = ExtResource("3_2gisx")
+
+[node name="Background" type="TextureRect" parent="." unique_id=536840520]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="." unique_id=2070783329]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -33.0
+offset_top = -80.0
+offset_right = 33.0
+offset_bottom = -41.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("4_44t0y")
+theme_override_font_sizes/font_size = 32
+text = "lost"
+
+[node name="Container" type="VBoxContainer" parent="." unique_id=1578065469]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -55.0
+offset_top = -33.0
+offset_right = 55.0
+offset_bottom = 65.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Button" type="Button" parent="Container" unique_id=831766222]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_44t0y")
+theme_override_font_sizes/font_size = 8
+text = "start"
+
+[node name="Button2" type="Button" parent="Container" unique_id=999547038]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_44t0y")
+theme_override_font_sizes/font_size = 8
+text = "quit"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=870917782]
+stream = ExtResource("5_oxcel")
+autoplay = true
+
+[connection signal="pressed" from="Container/Button" to="." method="playPressed"]
+[connection signal="pressed" from="Container/Button2" to="." method="quitPressed"]

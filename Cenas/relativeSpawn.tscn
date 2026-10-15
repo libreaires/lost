@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://do6uyb2p5wlrt"]
+
+[ext_resource type="Script" uid="uid://btk47qe7ognie" path="res://Scripts/relativeSpawn.gd" id="1_5wv1g"]
+[ext_resource type="Texture2D" uid="uid://cgkeuqtvh34ga" path="res://Sprites/mobs/Starman.png" id="2_md2lh"]
+
+[node name="RelativeSpawn" type="Node2D" unique_id=342080199 node_paths=PackedStringArray("debugSprite")]
+script = ExtResource("1_5wv1g")
+debugSprite = NodePath("DebugSprite")
+
+[node name="DebugSprite" type="Sprite2D" parent="." unique_id=1133557655]
+texture = ExtResource("2_md2lh")

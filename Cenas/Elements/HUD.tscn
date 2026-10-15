@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://cu70mwkmpevsd"]
+
+[ext_resource type="PackedScene" uid="uid://d32ncjp5skk80" path="res://Cenas/vignette.tscn" id="1_0c4q4"]
+[ext_resource type="Script" uid="uid://bopcddpe4ssxu" path="res://Cenas/Elements/hud.gd" id="1_wbv4g"]
+
+[node name="HUD" type="Control" unique_id=1700889843 node_paths=PackedStringArray("currentOverlay")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_wbv4g")
+currentOverlay = NodePath("Vignette")
+
+[node name="Vignette" parent="." unique_id=1732606097 instance=ExtResource("1_0c4q4")]
+layout_mode = 1

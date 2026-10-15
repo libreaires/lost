@@ -1,0 +1,63 @@
+[gd_scene format=3 uid="uid://dufaat7v0h3bi"]
+
+[ext_resource type="Script" uid="uid://bro1h4mdnqvtd" path="res://Scripts/goomba.gd" id="1_jg8wq"]
+[ext_resource type="Texture2D" uid="uid://d25c2oy4kslah" path="res://Sprites/mobs/inky/dead/sprite10.png" id="2_oulaa"]
+[ext_resource type="Texture2D" uid="uid://cksw5rq2th7gs" path="res://Sprites/mobs/inky/walk/sprite12.png" id="2_w2rut"]
+[ext_resource type="Texture2D" uid="uid://bjljgosy6rt5y" path="res://Sprites/mobs/inky/walk/sprite13.png" id="3_oulaa"]
+[ext_resource type="Texture2D" uid="uid://bmlyvw26cm13y" path="res://Sprites/mobs/inky/walk/sprite14.png" id="4_8mn0i"]
+[ext_resource type="Texture2D" uid="uid://h4npsdt75037" path="res://Sprites/mobs/inky/walk/sprite15.png" id="5_7in6l"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_oulaa"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_oulaa")
+}],
+"loop": true,
+"name": &"dead",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_w2rut")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_oulaa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_8mn0i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_7in6l")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oulaa"]
+size = Vector2(20, 26)
+
+[node name="Goomba" type="Area2D" unique_id=1197935967]
+collision_layer = 4
+collision_mask = 9
+script = ExtResource("1_jg8wq")
+
+[node name="Sprite" type="AnimatedSprite2D" parent="." unique_id=1574930829]
+sprite_frames = SubResource("SpriteFrames_oulaa")
+animation = &"dead"
+frame_progress = 0.12813264
+
+[node name="Collision" type="CollisionShape2D" parent="." unique_id=191704714]
+position = Vector2(0, 6)
+shape = SubResource("RectangleShape2D_oulaa")
+
+[node name="Raycast" type="RayCast2D" parent="." unique_id=684103060]
+target_position = Vector2(0, 19)
+collision_mask = 2
+
+[node name="Visibility" type="VisibleOnScreenNotifier2D" parent="." unique_id=678036817]
+rect = Rect2(-10, -7, 20, 26)
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="screen_exited" from="Visibility" to="." method="_on_visibility_screen_exited"]

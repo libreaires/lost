@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://p0y5mo6e1fy8"]
+
+[ext_resource type="PackedScene" uid="uid://cag56fg78taa6" path="res://Cenas/player.tscn" id="1_ci8g0"]
+[ext_resource type="PackedScene" uid="uid://bevs3hhfgsq6a" path="res://Cenas/Phases/Snowy Mountains/World.tscn" id="2_df77f"]
+
+[node name="Scene" type="Node2D" unique_id=1447134450]
+
+[node name="Player" parent="." unique_id=1488581999 instance=ExtResource("1_ci8g0")]
+
+[node name="Map" type="TileMapLayer" parent="." unique_id=2031998951]
+
+[node name="World" parent="." unique_id=2069120563 instance=ExtResource("2_df77f")]

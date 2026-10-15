@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://d32ncjp5skk80"]
+
+[ext_resource type="Shader" uid="uid://cnufqy0chngub" path="res://Cenas/vignette.gdshader" id="1_e2wyk"]
+[ext_resource type="Script" uid="uid://cxovddoqd0nln" path="res://Cenas/vignette.gd" id="2_hmu5u"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_62s3w"]
+shader = ExtResource("1_e2wyk")
+shader_parameter/circleSize = 0.0
+shader_parameter/screenResolution = Vector2(320, 240)
+shader_parameter/circlePosition = Vector2(0, 0)
+
+[node name="Vignette" type="ColorRect" unique_id=1732606097]
+material = SubResource("ShaderMaterial_62s3w")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.28235295, 0.2901961, 0.46666667, 1)
+script = ExtResource("2_hmu5u")
+screenResolution = Vector2(320, 240)

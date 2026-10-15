@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://drrsx3uv472l2"]
+
+[ext_resource type="Script" uid="uid://utvlw33djxy8" path="res://Scripts/spawnParticle.gd" id="1_x3hk2"]
+[ext_resource type="PackedScene" uid="uid://cag56fg78taa6" path="res://Cenas/player.tscn" id="6_qns0q"]
+
+[node name="Phase" type="Node2D" unique_id=385455203]
+script = ExtResource("1_x3hk2")
+
+[node name="Lethia" parent="." unique_id=1488581999 instance=ExtResource("6_qns0q")]

@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://cc8h7jvvevj4l"]
+
+[ext_resource type="Texture2D" uid="uid://biru66vvj15oy" path="res://Sprites/hud/portraits/lethia.png" id="1_5udud"]
+[ext_resource type="FontFile" uid="uid://dm3ch1vmt4ixr" path="res://Fonts/default.ttf" id="2_vodeq"]
+[ext_resource type="Texture2D" uid="uid://chdccpgs42053" path="res://Sprites/hud/portraits/crow.png" id="3_is2x6"]
+
+[node name="Control" type="CanvasLayer" unique_id=234767281]
+
+[node name="VBoxContainer" type="GridContainer" parent="." unique_id=553472792]
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 136.0
+offset_bottom = 72.0
+
+[node name="GridContainer" type="GridContainer" parent="VBoxContainer" unique_id=1715423212]
+layout_mode = 2
+columns = 2
+
+[node name="Lethia" type="TextureRect" parent="VBoxContainer/GridContainer" unique_id=2057238623]
+layout_mode = 2
+texture = ExtResource("1_5udud")
+stretch_mode = 3
+
+[node name="Health" type="Label" parent="VBoxContainer/GridContainer" unique_id=1873674814]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_vodeq")
+theme_override_font_sizes/font_size = 10
+text = "Health: "
+
+[node name="GridContainer2" type="GridContainer" parent="VBoxContainer" unique_id=687860446]
+layout_mode = 2
+columns = 2
+
+[node name="Crow" type="TextureRect" parent="VBoxContainer/GridContainer2" unique_id=392922695]
+layout_mode = 2
+texture = ExtResource("3_is2x6")
+stretch_mode = 3
+
+[node name="Stamina" type="Label" parent="VBoxContainer/GridContainer2" unique_id=378796515]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_vodeq")
+theme_override_font_sizes/font_size = 10
+text = "Stamina: "

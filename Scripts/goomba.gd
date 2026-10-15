@@ -1,0 +1,28 @@
+extends Enemy
+class_name Goomba
+
+var stupidCounter: int = 0
+
+func _ready() -> void:
+	animated_sprite_2d.play("walk")
+
+func _process(delta: float) -> void:
+	super._process(delta)
+	if not dead and stupidCounter != 0:
+		animated_sprite_2d.play("walk")
+		stupidCounter+1
+
+func _die():
+	super._die()
+	set_collision_layer_value(3, false)
+	set_collision_layer_value(1, false)
+	get_tree().create_timer(0.5).timeout.connect(queue_free)
+
+
+func _on_area_entered(area: Area2D) -> void:
+	if area is Koopa and (area as Koopa).in_a_shell and (area as Koopa).h_speed != 0:
+		_die_from_hit()
+
+
+func _on_visibility_screen_exited() -> void:
+	queue_free()
