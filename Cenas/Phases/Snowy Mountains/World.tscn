@@ -7,7 +7,7 @@
 [ext_resource type="Script" uid="uid://gkrr52xo3y7o" path="res://Scripts/anchoredElement.gd" id="3_xtc8w"]
 [ext_resource type="Texture2D" uid="uid://cgkeuqtvh34ga" path="res://Sprites/mobs/Starman.png" id="4_03akr"]
 [ext_resource type="PackedScene" uid="uid://buejtvk2wuhc" path="res://Cenas/Effects/Stars.tscn" id="5_so3kl"]
-[ext_resource type="PackedScene" uid="uid://cu70mwkmpevsd" path="res://Cenas/Elements/HUD.tscn" id="5_vvdx6"]
+[ext_resource type="PackedScene" uid="uid://cu70mwkmpevsd" path="res://Cenas/Elements/Interface.tscn" id="5_vvdx6"]
 [ext_resource type="Script" uid="uid://de11cuhp37bry" path="res://Scripts/background.gd" id="8_03akr"]
 
 [node name="World" type="Node2D" unique_id=2069120563 node_paths=PackedStringArray("currentRenderer", "currentInterface", "currentEnviroment")]
@@ -16,8 +16,9 @@ currentRenderer = NodePath("Renderer")
 currentInterface = NodePath("Interface")
 currentEnviroment = NodePath("Enviroment")
 
-[node name="Renderer" type="Camera2D" parent="." unique_id=2016118981]
+[node name="Renderer" type="Camera2D" parent="." unique_id=2016118981 node_paths=PackedStringArray("currentTarget")]
 script = ExtResource("2_xtc8w")
+currentTarget = NodePath(".")
 
 [node name="Interface" parent="." unique_id=1700889843 instance=ExtResource("5_vvdx6")]
 offset_right = 320.0
@@ -31,9 +32,11 @@ currentInterface = NodePath("../Interface")
 currentEnviroment = NodePath(".")
 
 [node name="Background" type="Sprite2D" parent="Enviroment" unique_id=1951509789]
+z_index = -10
 script = ExtResource("8_03akr")
 
 [node name="Effects" type="Node2D" parent="Enviroment" unique_id=946813078]
+z_index = -20
 
 [node name="Snow" parent="Enviroment/Effects" unique_id=1572573708 node_paths=PackedStringArray("debugSprite") instance=ExtResource("2_vvdx6")]
 position = Vector2(240, -140)

@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://cu70mwkmpevsd"]
+
+[ext_resource type="PackedScene" uid="uid://d32ncjp5skk80" path="res://Cenas/vignette.tscn" id="1_0c4q4"]
+[ext_resource type="Script" uid="uid://bopcddpe4ssxu" path="res://Cenas/Elements/hud.gd" id="1_wbv4g"]
+[ext_resource type="Script" uid="uid://ckyt80fuumilw" path="res://Scripts/overlayManager.gd" id="2_wxy1o"]
+
+[node name="Interface" type="Control" unique_id=1700889843 node_paths=PackedStringArray("currentOverlay")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_wbv4g")
+currentOverlay = NodePath("Overlays/Vignette")
+
+[node name="Overlays" type="Control" parent="." unique_id=1811771483 node_paths=PackedStringArray("currentOverlay")]
+anchors_preset = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource("2_wxy1o")
+currentOverlay = NodePath("Vignette")
+
+[node name="Vignette" parent="Overlays" unique_id=1732606097 instance=ExtResource("1_0c4q4")]
+visible = false
+layout_mode = 1
+onlyAnimation = true
+
+[node name="Players" type="VBoxContainer" parent="." unique_id=1106183031]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Lethia" type="HBoxContainer" parent="Players" unique_id=2125419211]
+layout_mode = 2
+
+[node name="Icon" type="Sprite2D" parent="Players/Lethia" unique_id=187710911]
+
+[node name="Text" type="Label" parent="Players/Lethia" unique_id=1857661314]
+layout_mode = 2
+
+[node name="Crow" type="HBoxContainer" parent="Players" unique_id=1856218549]
+layout_mode = 2
+
+[node name="Icon" type="Sprite2D" parent="Players/Crow" unique_id=634218319]
+position = Vector2(0, -4)
+
+[node name="Text" type="Label" parent="Players/Crow" unique_id=366286990]
+layout_mode = 2

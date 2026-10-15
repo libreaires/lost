@@ -9,7 +9,7 @@ shader_parameter/circleSize = 0.0
 shader_parameter/screenResolution = Vector2(320, 240)
 shader_parameter/circlePosition = Vector2(0, 0)
 
-[node name="Vignette" type="ColorRect" unique_id=1732606097]
+[node name="Vignette" type="ColorRect" unique_id=1732606097 node_paths=PackedStringArray("target")]
 material = SubResource("ShaderMaterial_62s3w")
 anchors_preset = 15
 anchor_right = 1.0
@@ -19,3 +19,5 @@ grow_vertical = 2
 color = Color(0.28235295, 0.2901961, 0.46666667, 1)
 script = ExtResource("2_hmu5u")
 screenResolution = Vector2(320, 240)
+target = NodePath(".")
+metadata/_edit_use_anchors_ = true

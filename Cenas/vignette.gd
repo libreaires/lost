@@ -1,5 +1,5 @@
 @tool
-extends ColorRect
+extends Overlay
 class_name Vignette
 
 # INSPECTOR
@@ -10,7 +10,7 @@ class_name Vignette
 		circleSize = value
 		if material: # Garante que o material existe antes de aplicar
 			material.set("shader_parameter/circleSize", min(value, circleSizeLimit))
-var circleSizeLimit: float = 1.0
+var circleSizeLimit: float = 2.0
 
 @export var circlePosition: Vector2:
 	set(value):
@@ -53,7 +53,7 @@ var circleSizeLimit: float = 1.0
 # GODOT
 func _ready() -> void:		
 	# animation example
-	anxiousOut()
+	anxiousIn()
 
 func _process(delta: float) -> void:
 	if target:
