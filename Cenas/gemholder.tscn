@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bu1lxfbfbpn7d"]
 
-[ext_resource type="Script" uid="uid://bw1nifeoh3kn5" path="res://gemholder.gd" id="1_p0ohc"]
+[ext_resource type="Script" uid="uid://bw1nifeoh3kn5" path="res://ore.gd" id="1_p0ohc"]
 [ext_resource type="Texture2D" uid="uid://ccb5ghkomrvqk" path="res://Sprites/objs/gemholder.png" id="2_ee3up"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ickxd"]

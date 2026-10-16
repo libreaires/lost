@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://g6f2hy4btpsq"]
+
+[ext_resource type="Script" uid="uid://utvlw33djxy8" path="res://Cenas/Effects/spawn/script.gd" id="1_w7tnu"]
+[ext_resource type="Texture2D" uid="uid://bqvgxxwo6rmny" path="res://Sprites/fx/spawn.png" id="2_yuspq"]
+
+[node name="Spawn" type="Node2D" unique_id=2137222887 node_paths=PackedStringArray("circle01", "circle02")]
+script = ExtResource("1_w7tnu")
+circle01 = NodePath("Circles/Top")
+circle02 = NodePath("Circles/Bottom")
+speed = 0.6
+
+[node name="Circles" type="Node2D" parent="." unique_id=1275746112]
+
+[node name="Top" type="Sprite2D" parent="Circles" unique_id=1683932913]
+texture = ExtResource("2_yuspq")
+
+[node name="Bottom" type="Sprite2D" parent="Circles" unique_id=1717151409]
+modulate = Color(1, 1, 1, 0.5)
+scale = Vector2(0.9938547, 0.9938547)
+texture = ExtResource("2_yuspq")

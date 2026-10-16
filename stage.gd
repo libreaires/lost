@@ -1,12 +1,14 @@
+# SCRIPT
 @tool
 extends Node
-class_name World
+class_name Stage
+# END
 
 
 # INSPECTOR
 @export var currentRenderer: Renderer
-@export var currentInterface: Interface
-@export var currentEnviroment: Enviroment
+@export var currentUI: UI
+@export var currentWorld: World
 @export var defaultStart: bool = true
 # END
 
@@ -15,7 +17,7 @@ class_name World
 func _ready() -> void:
 	# later find a way to generate a z_indez
 	# for every child of enviroment
-	currentEnviroment.setBackground($Enviroment/Effects, 1)
+	currentWorld.setBackground($World/Effects, 1)
 	
 	if defaultStart:
 		transitionIn()
@@ -26,10 +28,10 @@ func _ready() -> void:
 
 # METHODS
 func transitionIn() -> void:
-	currentInterface.currentOverlay.anxiousIn()
+	currentUI.currentOverlay.anxiousIn()
 	
 
 func transitionOut() -> void:
-	currentInterface.currentOverlay.anxiousOut()
+	currentUI.currentOverlay.anxiousOut()
 	
 # END

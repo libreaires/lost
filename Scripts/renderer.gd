@@ -1,6 +1,8 @@
+# SCRIPT
 @tool
 extends Camera2D
 class_name Renderer
+# END
 
 
 # INSPECTOR

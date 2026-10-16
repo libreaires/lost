@@ -1,6 +1,6 @@
 @tool
-extends World
-class_name Enviroment
+extends Stage
+class_name World
 
 
 # INSPECTOR
@@ -23,7 +23,7 @@ func generateBackground(layer: int) -> int:
 	return layer * -10
 	
 
-func setBackground(target: Node2D, layer: int = 0) -> void:
+func setBackground(target: CanvasItem, layer: int = 0) -> void:
 	layer = layer + 1
 	target.z_index = generateBackground(layer)
 	

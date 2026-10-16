@@ -1,20 +1,17 @@
 [gd_scene format=3 uid="uid://bevs3hhfgsq6a"]
 
-[ext_resource type="Script" uid="uid://byknwn3tyw2qo" path="res://world.gd" id="1_00slm"]
+[ext_resource type="Script" uid="uid://byknwn3tyw2qo" path="res://stage.gd" id="1_00slm"]
 [ext_resource type="Script" uid="uid://borgaynaxq3ym" path="res://Scripts/enviroment.gd" id="2_so3kl"]
 [ext_resource type="PackedScene" uid="uid://cfgln874oc2m2" path="res://Cenas/snow.tscn" id="2_vvdx6"]
-[ext_resource type="Script" uid="uid://caqfaacf668ag" path="res://Scripts/view.gd" id="2_xtc8w"]
-[ext_resource type="Script" uid="uid://gkrr52xo3y7o" path="res://Scripts/anchoredElement.gd" id="3_xtc8w"]
+[ext_resource type="Script" uid="uid://caqfaacf668ag" path="res://Scripts/renderer.gd" id="2_xtc8w"]
+[ext_resource type="Script" uid="uid://gkrr52xo3y7o" path="res://Scripts/Anchored.gd" id="3_xtc8w"]
 [ext_resource type="Texture2D" uid="uid://cgkeuqtvh34ga" path="res://Sprites/mobs/Starman.png" id="4_03akr"]
-[ext_resource type="PackedScene" uid="uid://buejtvk2wuhc" path="res://Cenas/Effects/Stars.tscn" id="5_so3kl"]
+[ext_resource type="PackedScene" uid="uid://buejtvk2wuhc" path="res://Cenas/Effects/stars.tscn" id="5_so3kl"]
 [ext_resource type="PackedScene" uid="uid://cu70mwkmpevsd" path="res://Cenas/Elements/Interface.tscn" id="5_vvdx6"]
-[ext_resource type="Script" uid="uid://de11cuhp37bry" path="res://Scripts/background.gd" id="8_03akr"]
 
-[node name="World" type="Node2D" unique_id=2069120563 node_paths=PackedStringArray("currentRenderer", "currentInterface", "currentEnviroment")]
+[node name="World" type="Node2D" unique_id=2069120563 node_paths=PackedStringArray("currentRenderer")]
 script = ExtResource("1_00slm")
 currentRenderer = NodePath("Renderer")
-currentInterface = NodePath("Interface")
-currentEnviroment = NodePath("Enviroment")
 
 [node name="Renderer" type="Camera2D" parent="." unique_id=2016118981 node_paths=PackedStringArray("currentTarget")]
 script = ExtResource("2_xtc8w")
@@ -24,16 +21,11 @@ currentTarget = NodePath(".")
 offset_right = 320.0
 offset_bottom = 240.0
 
-[node name="Enviroment" type="Node2D" parent="." unique_id=2107192125 node_paths=PackedStringArray("currentBackground", "currentRenderer", "currentInterface", "currentEnviroment")]
+[node name="Enviroment" type="Node2D" parent="." unique_id=2107192125]
 script = ExtResource("2_so3kl")
-currentBackground = NodePath("Background")
-currentRenderer = NodePath("../Renderer")
-currentInterface = NodePath("../Interface")
-currentEnviroment = NodePath(".")
 
 [node name="Background" type="Sprite2D" parent="Enviroment" unique_id=1951509789]
 z_index = -10
-script = ExtResource("8_03akr")
 
 [node name="Effects" type="Node2D" parent="Enviroment" unique_id=946813078]
 z_index = -20

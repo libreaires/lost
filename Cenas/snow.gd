@@ -1,5 +1,5 @@
 @tool
-extends AnchoredElement
+extends Anchored
 class_name Particle
 
 

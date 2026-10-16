@@ -1,18 +1,18 @@
 [gd_scene format=3 uid="uid://buejtvk2wuhc"]
 
-[ext_resource type="Texture2D" uid="uid://b755ff3xcwyid" path="res://Sprites/fx/star/sprite1.png" id="1_w2vr1"]
-[ext_resource type="Texture2D" uid="uid://c1txjenhsitgc" path="res://Sprites/fx/star/sprite2.png" id="2_qkxl0"]
-[ext_resource type="Texture2D" uid="uid://c7c0df5hq4be5" path="res://Sprites/fx/star/sprite3.png" id="3_u2cy2"]
-[ext_resource type="Texture2D" uid="uid://bcs2qtlwmbq51" path="res://Sprites/fx/star/sprite4.png" id="4_f3h0f"]
+[ext_resource type="Texture2D" uid="uid://b755ff3xcwyid" path="res://Sprites/fx/star/sprite1.png" id="1_q348r"]
+[ext_resource type="Texture2D" uid="uid://c1txjenhsitgc" path="res://Sprites/fx/star/sprite2.png" id="2_aa6bl"]
+[ext_resource type="Texture2D" uid="uid://c7c0df5hq4be5" path="res://Sprites/fx/star/sprite3.png" id="3_nuamw"]
+[ext_resource type="Texture2D" uid="uid://bcs2qtlwmbq51" path="res://Sprites/fx/star/sprite4.png" id="4_1w6g0"]
 
 [sub_resource type="AnimatedTexture" id="AnimatedTexture_3ajv0"]
 frames = 4
-frame_0/texture = ExtResource("1_w2vr1")
-frame_1/texture = ExtResource("2_qkxl0")
+frame_0/texture = ExtResource("1_q348r")
+frame_1/texture = ExtResource("2_aa6bl")
 frame_1/duration = 1.0
-frame_2/texture = ExtResource("3_u2cy2")
+frame_2/texture = ExtResource("3_nuamw")
 frame_2/duration = 1.0
-frame_3/texture = ExtResource("4_f3h0f")
+frame_3/texture = ExtResource("4_1w6g0")
 frame_3/duration = 1.0
 
 [node name="Stars" type="Node2D" unique_id=1704399638]

@@ -1,7 +1,7 @@
 # script
 @tool
 extends Node2D
-class_name AnchoredElement
+class_name Anchored
 
 # enumerators
 enum Anchor {

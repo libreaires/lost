@@ -1,6 +1,6 @@
 @tool
-extends Control
-class_name Interface
+extends UI
+class_name HUD
 
 
 # INSPECTOR
