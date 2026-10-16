@@ -1,0 +1,3 @@
+# snowy trail
+## Lethia finds herself in the tip of a mountain, and her only company is a crow with an inflated ego...
+This game is still REALLY early in development. Started as a college assignment, and now I feel the need to finish, at some point.

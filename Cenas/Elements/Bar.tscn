@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://bly4ddxbjjslv"]
+
+[node name="Bar" type="Control" unique_id=1942647593]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Group" type="HBoxContainer" parent="." unique_id=192432272]
+layout_mode = 0
+offset_bottom = 40.0
+
+[node name="Icons" type="HBoxContainer" parent="Group" unique_id=183631807]
+layout_mode = 2
